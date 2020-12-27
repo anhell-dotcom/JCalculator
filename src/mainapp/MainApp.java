@@ -292,6 +292,14 @@ public class MainApp {
 		frmJcalculator.getContentPane().add(btn0);
 
 		btnDot = new JButton(".");
+		btnDot.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(!textField.getText().contains("."))
+		          {
+					textField.setText(textField.getText() + btnDot.getText());
+		          }
+			}
+		});
 		btnDot.setFont(new Font("Tahoma", Font.BOLD, 20));
 		btnDot.setBounds(182, 321, 69, 50);
 		frmJcalculator.getContentPane().add(btnDot);
